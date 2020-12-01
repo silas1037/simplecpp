@@ -4,7 +4,11 @@
 
 name: CI-windows
 
-on: [push,pull_request]
+on:
+  push:
+    tags:
+      - v*
+  workflow_dispatch:
 
 defaults:
   run:
